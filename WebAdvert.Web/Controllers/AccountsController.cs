@@ -94,5 +94,61 @@ namespace WebAdvert.Web.Controllers
             
             return View(model);
         }
+        
+        public async Task<IActionResult> ResetPasswordConfirm()
+        {
+            var model = new ResetPassword();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Confirm")]
+        public async Task<IActionResult> ResetPassword(ResetPassword model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+
+                if (user == null)
+                {
+                    ModelState.AddModelError("UserNotFound", "Invalid code.");
+                    return View(model);
+                }
+
+                await user.ConfirmForgotPasswordAsync(model.Code, model.Password);
+
+                return View("ResetPasswordConfirm");
+            }
+            
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Login(Login model)
+        {
+            
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Login")]
+        public async Task<IActionResult> LoginPost(Login model)
+        {
+            if (ModelState.IsValid)
+            {
+                var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
+
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("LoginError", "Email and password do not match");
+                }
+            }
+
+            return View("Login", model);
+        }
     }
 }

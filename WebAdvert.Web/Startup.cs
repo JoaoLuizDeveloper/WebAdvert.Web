@@ -34,6 +34,12 @@ namespace WebAdvert.Web
                 RequireNonAlphanumeric = false,
                 RequireUppercase = false
             });
+
+            //This will redirect you back to login page in case the user not loged
+            services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Accounts/Login";
+            });
             services.AddControllersWithViews();
         }
 
