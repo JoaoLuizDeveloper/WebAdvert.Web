@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30204.135
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdvert.Web", "WebAdvert.Web.csproj", "{EC52AA83-CF72-4B82-BD98-CC469C36477B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAdvert.Web", "WebAdvert.Web.csproj", "{EC52AA83-CF72-4B82-BD98-CC469C36477B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAdvertWeb.Models", "..\WebAdvertWeb.Models\WebAdvertWeb.Models.csproj", "{A0879F0B-E188-4461-9EEE-C11CFB3BADC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{EC52AA83-CF72-4B82-BD98-CC469C36477B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC52AA83-CF72-4B82-BD98-CC469C36477B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC52AA83-CF72-4B82-BD98-CC469C36477B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0879F0B-E188-4461-9EEE-C11CFB3BADC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0879F0B-E188-4461-9EEE-C11CFB3BADC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0879F0B-E188-4461-9EEE-C11CFB3BADC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0879F0B-E188-4461-9EEE-C11CFB3BADC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
