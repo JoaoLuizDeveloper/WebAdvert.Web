@@ -17,6 +17,7 @@ HTML, CSS, JavaScript
 Clone the repository:
 
 git clone https://github.com/JoaoLuizDeveloper/WebAdvert.Web.git
+<br />
 cd WebAdvert.Web
 Open the project:
 
